@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="container-fluid mt-5">
+    <h2>Add Vehiculo</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary">Añadir</button>
+    </form>
+</div>
+{% endblock content %}
